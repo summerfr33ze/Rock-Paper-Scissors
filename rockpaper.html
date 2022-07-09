@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        const playArray = ["rock", "paper", "scissors"]
+        
+        function computerPlay() {
+            return playArray[Math.floor(Math.random()*playArray.length)]
+            
+        }
+
+        
+
+        let playerSelection = prompt("rock, paper, or scissors?")
+        const computerSelection = computerPlay();
+
+        function playRound(playerSelection, computerSelection) {
+
+            
+
+            
+            if (playerSelection === "rock" && computerSelection === "rock") {
+                return "The computer picked rock. It's a tie."}
+
+            else if (playerSelection === "rock" && computerSelection === "scissors") {
+                return "The computer picked scissors. You won!"
+            }
+
+            else if (playerSelection === "rock" && computerSelection === "paper"){
+                return "The computer picked paper. You lost!"}
+
+
+
+            else if (playerSelection === "paper" && computerSelection === "paper") {
+                return "The computer picked paper. It's a tie."
+            }
+
+            else if (playerSelection === "paper" && computerSelection === "rock"){
+                return "The computer picked rock. You lost!"}
+            
+            else if (playerSelection === "paper" && computerSelection === "scissors")
+                {return "The computer picked scissors. You lost!"}
+            
+            else if (playerSelection === "scissors" && computerSelection === "scissors") {
+                return "The computer picked scissors. It's a tie."
+            }
+        
+            else if (playerSelection === "scissors" && computerSelection === "paper" ){
+                return "The computer picked paper. You won!"}
+            
+            else if(playerSelection === "scissors" && computerSelection === "rock"){
+                return "The computer picked rock. You lost!"}
+            
+            else {
+                return "You can only pick rock, paper, or scissors!"
+            }
+            
+        }
+        console.log(playRound(playerSelection, computerSelection))
+        
+
+    </scri
+   
+</body>
+</html>
