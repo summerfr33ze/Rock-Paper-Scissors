@@ -17,16 +17,18 @@
 
         
         const playArray = ["rock", "paper", "scissors"]
-        let playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase()
+
+        function playerPlay() {
+            let playerString = prompt("Rock, Paper, or Scissors?").toLowerCase()
+            return playerString
+            
+        }
         
         function computerPlay() {
             return playArray[Math.floor(Math.random()*playArray.length)]
         
         }
 
-        function playerPlay() {
-
-        }
 
 
         function playRound(playerSelection, computerSelection) {
@@ -80,7 +82,7 @@
         // we have to run a new instance of the playRound function 
         
         let playerScore = 0
-        let computerScore = 0 ﻿
+        let computerScore = 0 
 
 
     function game() {
@@ -91,7 +93,7 @@
         for (let i = 0; i < 5; i++) {
             
             
-            let playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase()
+            let playerSelection = playerPlay()
             let computerSelection = computerPlay()
 
 
@@ -113,7 +115,7 @@
                 
         
         
-            else {playerScore++ && computerScore++
+            else {playerScore++, computerScore++
             
             }
             
@@ -125,22 +127,15 @@
        
 
 
-    function resetGame() {
-    computerScore = 0
-    playerScore = 0
-    
-    game()
-
-    }
-
+   
 
 
 
 }
-game()
-resetGame() 
-        
 
+
+        
+game()
                 
                 
           
