@@ -5,157 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="rockpaper.js" defer></script>
 </head>
 <body>
-    <script>
-
-
-
-
-
-
-
-        
-        const playArray = ["rock", "paper", "scissors"]
-
-        function playerPlay() {
-            let playerString = prompt("Rock, Paper, or Scissors?").toLowerCase()
-            return playerString
-            
-        }
-        
-        function computerPlay() {
-            return playArray[Math.floor(Math.random()*playArray.length)]
-        
-        }
-
-
-
-        function playRound(playerSelection, computerSelection) {
-
-            
-
-            
-            if (playerSelection === "rock" && computerSelection === "rock") {
-                return " The computer picked rock. It's a tie."}
-
-            else if (playerSelection === "rock" && computerSelection === "scissors") {
-                return "The computer picked scissors. You won!"
-            }
-            else if (playerSelection === "rock" && computerSelection === "paper"){
-                return "The computer picked paper. You lost!"}
-
-
-
-            else if (playerSelection === "paper" && computerSelection === "paper") {
-                return "The computer picked paper. It's a tie."
-            }
-
-            else if (playerSelection === "paper" && computerSelection === "rock"){
-                return "The computer picked rock. You won!"}
-            
-            else if (playerSelection === "paper" && computerSelection === "scissors")
-                {return "The computer picked scissors. You lost!"}
-            
-            else if (playerSelection === "scissors" && computerSelection === "scissors") {
-                return "The computer picked scissors. It's a tie."
-            }
-        
-            else if (playerSelection === "scissors" && computerSelection === "paper" ){
-                return "The computer picked paper. You won!"}
-            
-            else if(playerSelection === "scissors" && computerSelection === "rock"){
-                return "The computer picked rock. You lost!"}
-            
-            else {
-                return "You can only pick rock, paper, or scissors!"
-            }
-
-            
-            
-        }
-         
-        // loop through five turns
-        // determine whether user won at each turn
-        //if user won add to their score
-        //else add to the computer's score
-        // we have to run a new instance of the playRound function 
-        
-        let playerScore = 0
-        let computerScore = 0 
-
-
-    function game() {
-
-       
-        
-    
-        for (let i = 0; i < 5; i++) {
-            
-            
-            let playerSelection = playerPlay()
-            let computerSelection = computerPlay()
-
-
-
-            returnString = playRound(playerSelection, computerSelection)
-            console.log(returnString)
-            
-          
-         
-            if (returnString.includes("won") === true){
-            playerScore++
-            
-        }
-               
-
-            else if (returnString.includes("lost") === true){
-            computerScore++}
-
-                
-        
-        
-            else {playerScore++, computerScore++
-            
-            }
-            
-            console.log(playerSelection, computerSelection)
-            console.log (playerScore, computerScore)
-        
-            
-    }
-       
-
-
-   
-
-
-
-}
-
-
-        
-game()
-                
-                
-          
-                
-                
-
-
-                
-                
-                
-                
-                
-            
-        
-
-        
-        
-        
-        
-    </script>
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+    <div id="outcome-text"></div>
+    <div>
+        <div id="playerScore"></div>
+        <div id="computerScore"></div>
+    </div>
    
 </body>
 </html>
