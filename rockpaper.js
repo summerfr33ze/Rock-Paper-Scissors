@@ -3,7 +3,7 @@
 
 
 
-    
+ // computer picks random choice out of an array  
 
 const playArray = ["rock", "paper", "scissors"]
 
@@ -11,6 +11,8 @@ function computerPlay() {
     return playArray[Math.floor(Math.random()*playArray.length)]
 
 }
+
+//condtionals that decide who wins a round based on user input and computer choice
 
 function playRound(playerSelection, computerSelection) {
 
@@ -56,32 +58,41 @@ function playRound(playerSelection, computerSelection) {
     
 }       
 
+//DOM methods introducing game components into the JS code
+
 const rockButton = document.querySelector ("#rock")
 const paperButton = document.querySelector ("#paper")
 const scissorsButton = document.querySelector ("#scissors")
 const buttons = document.querySelectorAll ("button")
-const roundOutcome = document.querySelector("#outcome-text")
-const playerScore = document.querySelector("#playerScore")
-const computerScore = document.querySelector("#computerScore")
-const displayWinner = document.querySelector("#displayWinner")
+const roundOutcome = document.querySelector(".outcome-text")
+const playerScore = document.querySelector(".playerScore")
+const computerScore = document.querySelector(".computerScore")
+const displayWinner = document.querySelector(".displayWinner")
 
+//initial values of computer and player scores are zero and display is empty
 
 playerScore.textContent = 0
 computerScore.textContent = 0
 displayWinner.textContent= ""
 
+//event listeners base the player selection on the button that was clicked
+//computer choice is picked with computerPlay functionc
+// round outcome is determined with playRound function
 
 rockButton.addEventListener("click", (e) => {
+    resetGame()
     const computerSelection = computerPlay()
     const playerSelection = "rock"
     roundOutcome.textContent = (playRound(playerSelection, computerSelection))
     let currentRoundOutcome = roundOutcome.textContent
      playConditionals(currentRoundOutcome)
+     endGame()
     
   })
     
 
 paperButton.addEventListener("click", (e) => {
+    resetGame()
     const computerSelection = computerPlay()
     const playerSelection = "paper"
     roundOutcome.textContent = (playRound(playerSelection,computerSelection))
@@ -92,18 +103,16 @@ paperButton.addEventListener("click", (e) => {
 
 scissorsButton.addEventListener
 ("click", (e) => {
+    resetGame()
     const computerSelection = computerPlay()
     const playerSelection = "scissors"
     roundOutcome.textContent = (playRound(playerSelection, computerSelection))
     let currentRoundOutcome = roundOutcome.textContent
      playConditionals(currentRoundOutcome)
     
+    
 })
 
-
-    
-    
-t
 
 
 function playConditionals(currentRoundOutcome) {
@@ -129,7 +138,14 @@ function playConditionals(currentRoundOutcome) {
 
 }
 
+function resetGame() {
+    if (playerScore.textContent === "5" || computerScore.textContent === "5") {
+        playerScore.textContent = "0"
+        computerScore.textContent ="0"
+    }
 
+    else { return }
+}
 
 
 

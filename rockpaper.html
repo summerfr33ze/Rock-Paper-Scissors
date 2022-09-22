@@ -6,17 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="rockpaper.js" defer></script>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <button class="btn" id="rock" onclick= >Rock</button>
-    <button  class="btn" id="paper" onclick=>Paper</button>
-    <button class="btn" id="scissors" onclick>Scissors</button>
-    <div id="outcome-text"></div>
-    <div>
-        <div id="playerScore"></div>
-        <div id="computerScore"></div>
+
+    <div class="game-container">
+    <div class="title">rock paper scissors</div>
+    <div class="button-container">
+    <button class="btn" id="rock" ><img src="rock.svg"></button>
+    <button  class="btn" id="paper"><img src="paper.svg"></button>
+    <button class="btn" id="scissors"><img src="scissors.svg"></button>
     </div>
-    <div id="displayWinner"></div>
+    <div class="scores">
+        <div class="playerText">Player Score: </div>
+        <div class="playerScore"></div>
+        <div class="computerText">Computer Score: </div>
+        <div class="computerScore"></div>
+    </div>
+    <div class="outcome-text"></div>
+    <div class="displayWinner"> </div>
+    </div>
    
 </body>
 </html>

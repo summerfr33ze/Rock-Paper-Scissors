@@ -1,0 +1,77 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: lightblue;
+}
+
+.title {
+    display: block;
+}
+
+
+@font-face {
+    font-family: Inconsolata;
+    src: url(Inconsolata.ttf)
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100 vh;
+}
+
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+.outcome-text {
+    display: flex;
+    font-size: 3em;
+    font-family: Inconsolata;
+}
+
+.scores {
+   font-size: 3em;
+   font-family: Inconsolata;
+}
+
+.playerScore {
+    
+    width: 1em;
+    display: inline-block;
+    
+}
+
+.playerText{
+    display: inline-block;
+}
+
+.computerScore {
+    
+    width: 1em;
+    display: inline-block;
+    
+}
+
+.computerText {
+    display: inline-block;
+}
+.displayWinner {
+    font-size: 3em;
+    font-family: Inconsolata;
+    
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+    font-size: 5em;
+    font-family: Inconsolata;
+}
